@@ -29,10 +29,9 @@ func SIPShowPeer(client Client, actionID string, peer string) (Response, error) 
 }
 
 // SIPPeerStatus shows one SIP peer status.
-func SIPPeerStatus(client Client, actionID string, peer string) (Response, error) {
-	return send(client, "SIPpeerstatus", actionID, map[string]string{
-		"Peer": peer,
-	})
+func SIPPeerStatus(client Client, actionID string) (Response, error) {
+	return requestList(client, "SIPpeerstatus", actionID, "PeerStatus", "SIPpeerstatusComplete")
+
 }
 
 // SIPShowRegistry shows SIP registrations (text format).
