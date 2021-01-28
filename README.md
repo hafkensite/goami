@@ -10,7 +10,7 @@ This code is based on C [libami](http://sourceforge.net/projects/amsuite/files/l
 The following command will install the AMI client.
 
 ```sh
-go get -u github.com/heltonmarx/goami/ami
+go get -u github.com/hafkensite/goami/ami
 ```
 
 To test this package with Asterisk it's necessary set the file `/etc/asterisk/manager.conf` with configuration bellow:
@@ -38,7 +38,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/heltonmarx/goami/ami"
+	"github.com/hafkensite/goami/ami"
 )
 
 var (
@@ -75,11 +75,11 @@ func main() {
 
 ## Documentation
 
-This projects documentation can be found on godoc at [goami](http://godoc.org/github.com/heltonmarx/goami/ami),
+This projects documentation can be found on godoc at [goami](http://godoc.org/github.com/hafkensite/goami/ami),
 and supports [Asterisk 10 AMI Actions](https://wiki.asterisk.org/wiki/display/AST/Asterisk+10+AMI+Actions)
 
 ## License
 
-MIT-LICENSE. See [LICENSE](https://github.com/heltonmarx/goami/blob/master/LICENSE)
+MIT-LICENSE. See [LICENSE](https://github.com/hafkensite/goami/blob/master/LICENSE)
 or the LICENSE file provided in the repository for details.
 
