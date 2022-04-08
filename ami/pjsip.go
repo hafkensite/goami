@@ -54,6 +54,11 @@ func PJSIPShowContacts(ctx context.Context, client Client, actionID string) ([]R
 	return requestList(ctx, client, "PJSIPShowContacts", actionID, "ContactList", "ContactListComplete")
 }
 
+// PJSIPShowAors list pjsip Aors.
+func PJSIPShowAors(ctx context.Context, client Client, actionID string) ([]Response, error) {
+	return requestList(ctx, client, "PJSIPShowAors", actionID, "AorList", "AorListComplete")
+}
+
 // PJSIPShowRegistrationInboundContactStatuses lists ContactStatuses for PJSIP inbound registrations.
 func PJSIPShowRegistrationInboundContactStatuses(ctx context.Context, client Client, actionID string) ([]Response, error) {
 	return requestList(ctx, client, "PJSIPShowRegistrationInboundContactStatuses", actionID, "ContactStatusDetail", "ContactStatusDetailComplete")
