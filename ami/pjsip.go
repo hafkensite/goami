@@ -49,11 +49,6 @@ func PJSIPShowEndpoints(ctx context.Context, client Client, actionID string) ([]
 	return requestList(ctx, client, "PJSIPShowEndpoints", actionID, "EndpointList", "EndpointListComplete")
 }
 
-// PJSIPShowContacts list pjsip contacts.
-func PJSIPShowContacts(ctx context.Context, client Client, actionID string) ([]Response, error) {
-	return requestList(ctx, client, "PJSIPShowContacts", actionID, "ContactList", "ContactListComplete")
-}
-
 // PJSIPShowAors list pjsip Aors.
 func PJSIPShowAors(ctx context.Context, client Client, actionID string) ([]Response, error) {
 	return requestList(ctx, client, "PJSIPShowAors", actionID, "AorList", "AorListComplete")
