@@ -85,6 +85,7 @@ func (s *Socket) run(ctx context.Context, conn net.Conn) {
 		msg, err := reader.ReadString('\n')
 		if err != nil {
 			if err == io.EOF && len(msg) == 0 {
+				s.Close(ctx)
 				return
 			}
 			s.errors <- err
